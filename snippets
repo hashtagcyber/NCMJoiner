@@ -26,13 +26,18 @@ for i in filestomake:
 ////////////////////
 
 List all files in directory ending in %command%
-For host in hostlist:
+import glob
+almosthost=glob.glob("/root/git/NCMJoiner/samplefiles/*showrun")
+hostlist=[]
+for i in almosthost:
+	hostlist.append(i.rstrip("showrun"))
+for host in hostlist:
 	hostfiles=[]
 	hostfiles.append(host+"showversion")
 	hostfiles.append(host+"showrun")
 	hostfiles.append(host+"showcdpneighboor")
 	with open(host + "results.txt",'w') as outfile:
-		for fname in hostfiles
+		for fname in hostfiles:
 			with open(fname) as infile:
 			outfile.write(infile.read())
 
