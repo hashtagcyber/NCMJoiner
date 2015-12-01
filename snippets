@@ -1,3 +1,5 @@
+hostname-typeofoutput
+
 #Creating files to play with
 
 #Create a list from a file containing names
@@ -20,4 +22,20 @@ for i in filestomake:
      file = open(i,'w')
      file.write(i)
      file.close()
+
+////////////////////
+
+List all files in directory ending in %command%
+For host in hostlist:
+	hostfiles=[]
+	hostfiles.append(host+"showversion")
+	hostfiles.append(host+"showrun")
+	hostfiles.append(host+"showcdpneighboor")
+	with open(host + "results.txt",'w') as outfile:
+		for fname in hostfiles
+			with open(fname) as infile:
+			outfile.write(infile.read())
+
+
+	
 
