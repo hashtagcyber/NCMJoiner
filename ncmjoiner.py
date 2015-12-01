@@ -9,7 +9,7 @@ almosthost=glob.glob(targetdir+"*"+endswith)
 hostlist=[]
 # Strip the 
 for i in almosthost:
-	hostlist.append(i.rstrip("showrun"))
+	hostlist.append(i.rstrip(endswith))
 for host in hostlist:
 	hostfiles=[]
 	hostfiles.append(host+"showversion")
