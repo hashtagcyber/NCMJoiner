@@ -1,0 +1,2 @@
+This project is to take a directory full of outputs from Cisco NCM and join all files with the same hostname together into one text file. Great when you script a bunch of commands with NCM and run it across 100 devices.
+
