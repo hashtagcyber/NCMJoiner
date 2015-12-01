@@ -1,0 +1,23 @@
+#Creating files to play with
+
+#Create a list from a file containing names
+mylist = open("10names.txt").readlines()
+
+#Strip newline from list to newlist
+strippedname = []
+for i in mylist:
+	strippedname.append(i.strip())
+
+#Create a list of filenames
+filestomake=[]
+for i in strippedname:
+	filestomake.append(i + "showversion")
+	filestomake.append(i + "showrun")
+	filestomake.append(i + "showcdpneighboor")
+
+#create files with name/contents of list
+for i in filestomake:
+     file = open(i,'w')
+     file.write(i)
+     file.close()
+
